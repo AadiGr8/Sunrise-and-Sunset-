@@ -8,6 +8,8 @@ var backgroundImg;
 
 var bg ;
 
+var hour;
+
 function preload() {
     getBackgroundImg();
 }
@@ -50,7 +52,7 @@ async function getBackgroundImg(){
     var responseJSON = await response.json();
     // write code slice the datetime
     var dateTime = responseJSON.datetime;
-    var hour = dateTime.slice(11,13);
+    hour = dateTime.slice(11,13);
     console.log(hour);
     // add conditions to change the background images from sunrise to sunset
     if(hour>=04 && hour<=06){
